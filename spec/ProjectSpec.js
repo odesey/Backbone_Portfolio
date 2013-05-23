@@ -4,7 +4,8 @@ describe("A Project", function() {
 
   beforeEach(function() {
     project = new app.models.Project({
-      title: "My amazing test project"
+      title: "My amazing test project",
+      url: "http://example.org"
     });
   });
 
@@ -13,24 +14,47 @@ describe("A Project", function() {
   });
 
   it("should not have an id because its not persisted", function() {
-  	expect(project.id).toBeUndefined();
+    expect(project.id).toBeUndefined();
   });
 
   it("should have an cid", function() {
-  	expect(project.cid).not.toBe(null);
+    expect(project.cid).not.toBe(null);
   });
 
+  describe("Persistance in local storage", function() {
+    beforeEach(function() {
+      project.save();
+    });
 
-	describe("Setting an attribute", function() {
-		beforeEach(function() {
-			project.set({
-				"title" : "Cool Beans"
-			});
-		});
+    it("should have an id", function() {
+      expect(project.id).not.toBe(null);
+    });
+  });
 
-	it("should update the title", function() {
-		expect(project.get("title")).toEqual("Cool Beans Changed");
-	});
+  describe("Setting an attribute", function() {
+    beforeEach(function() {
+      project.set({
+        "title" : "Cool Beans"
+      });
+    });
+
+    it("Should update the title", function() {
+      expect(project.get("title")).toEqual("Cool Beans Changed");
+    });
+
+  });
+
+  describe("validation", function() {
+    beforeEach(function() {
+      project = new app.models.Project({
+        title: "My amazing test project",
+        url: ""
+      });
+    });
+
+    it("should not be valid without a URL", function() {
+      expect(project.isValid()).toBeFalsy();
+    });
+  });
+
 });
-});
-
