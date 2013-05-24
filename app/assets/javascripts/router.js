@@ -2,7 +2,8 @@ app.Router = Backbone.Router.extend({
 
   routes: {
     '' : 'home',
-    'users/:id' : 'userShow'
+    'users/:id' : 'userShow',
+    'users/new' : 'newUser'
   },
 
   home: function() {
