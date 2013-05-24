@@ -2,7 +2,7 @@ app.views.SkillView = Backbone.View.extend({
 
   tagName: 'div',
   className: 'skill',
-  template: _.template($('#project-template').html()),
+  template: JST['templates/_skill'],
   events: {
     'click .add-skill': 'addSkill',
     'dblclick .add-skill': 'editSkillName',

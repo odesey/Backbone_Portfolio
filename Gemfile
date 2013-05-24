@@ -8,6 +8,7 @@ gem 'pg'
 gem 'ejs'
 gem 'bootstrap-sass'
 gem 'sqlite3'
+gem 'simple_form'
 
 
 # Gems used only for assets and not required
