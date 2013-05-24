@@ -1,4 +1,16 @@
 BackbonePortfolio::Application.routes.draw do
+  resources :skills
+
+
+  resources :users
+
+
+  resources :projects
+
+
+  resources :homes
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
