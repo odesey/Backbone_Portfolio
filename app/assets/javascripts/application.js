@@ -1,4 +1,5 @@
 //= require jquery-1.9.1.min
+//= require bootstrap
 //= require underscore-min
 //= require ejs_production
 //= require backbone-min
