@@ -9,6 +9,7 @@ gem 'ejs'
 gem 'bootstrap-sass'
 gem 'sqlite3'
 gem 'simple_form'
+gem 'pry'
 
 
 # Gems used only for assets and not required
