@@ -1,6 +1,15 @@
+# class UsersController < Devise::SessionsController
+
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
+
+    # def create
+    #   super
+    # end
+    #  def update
+    #    #edit here
+    #  end
   def index
     @users = User.all
 
