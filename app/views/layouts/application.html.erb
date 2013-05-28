@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linked Out!</title>
@@ -31,6 +34,7 @@
               <%= yield %>
 
               <section id="content">
+                <%= yield %>
                 <!-- Backbone Output In Here ! -->
               </section>
 
@@ -46,4 +50,5 @@
     </section>
 
   </body>
+  <%#= javascript_include_tag "backbone" if @backbone %>
 </html>

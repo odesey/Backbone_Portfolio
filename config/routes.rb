@@ -3,8 +3,12 @@ BackbonePortfolio::Application.routes.draw do
 
   resources :skills
 
+  resources :users, :only => [:show, :index] do
+    resources :projects, :only => [:create, :index, :update, :destroy]
+  end
 
-  resources :users
+  
+  # resources :users
 
 
   resources :projects
