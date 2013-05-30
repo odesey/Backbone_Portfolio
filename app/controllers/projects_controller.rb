@@ -3,6 +3,7 @@ class ProjectsController < ApplicationController
   before_filter :load_user
 
   def create
+    binding.pry
     @project = Project.new(params[:project])
     @project.save!
 
