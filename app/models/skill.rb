@@ -1,5 +1,5 @@
 class Skill < ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :skill, :name
 
   belongs_to :project
 
